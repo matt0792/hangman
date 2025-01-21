@@ -1,0 +1,49 @@
+.options {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  gap: 20px;
+  padding: 5px;
+  padding-top: 13px;
+}
+
+/* .options:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px; 
+  width: 100%;
+  background: linear-gradient(to right, #000000a6, #ffffff9d); 
+} */
+
+.option-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: black;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.1s ease;
+}
+
+.option-button:hover {
+  transform: scale(105%);
+}
+
+.option-button:active {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.greyed-opt {
+  opacity: 0.4 !important;
+}

@@ -1,0 +1,49 @@
+/* Styling for alphabet component */
+
+.alphabet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  gap: 10px;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  min-height: 13vh;
+}
+
+.letter-card {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
+  color: black;
+  border: 2px solid black;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.1s ease;
+}
+
+.letter-card:hover {
+    transform: scale(110%);
+    background-color: rgb(190, 190, 190);
+    opacity: 1;
+}
+
+.letter-card.guessed {
+  pointer-events: none;
+  opacity: 0.5;
+  display: none;
+}
+
+.letter-card.animating {
+  transform: translateY(-50px);
+  opacity: 0;
+}
