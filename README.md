@@ -5,10 +5,6 @@ The classic word-guessing game, built with React + Vite. Features keyboard suppo
 [![React](https://img.shields.io/badge/React-18.2-%2361DAFB?logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-4.4-%646CFF?logo=vite)](https://vitejs.dev/)
 
-
-## Live Demo
-https://matt0792.github.io/hangman_/
-
 ## Features
 
 ### Core Gameplay
@@ -23,7 +19,7 @@ https://matt0792.github.io/hangman_/
 - **Game persistence**:
   - Maintains state until refresh/restart
 
-## 📦 Installation
+## Installation
 
 1. Clone repository:
 ```bash
@@ -55,14 +51,11 @@ Uses the [Random Word API](https://random-word-api.herokuapp.com/home) with:
   const LOCAL_WORDS = ["REACT", "VITE", "HOOKS", "COMPONENT"];
   ```
 
-## 📸 Screenshots
-| ![Screenshot](/screenshots/hangman-screenshot.png) | 
-
-## 🛠️ Technologies
+## Technologies
 - **Frontend**: React 18
 - **Build Tool**: Vite 4
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
-- **Styling**: CSS Modules
+- **Styling**: CSS Modules + Bootstrap
 - **State Management**: React Hooks
 
 ---
