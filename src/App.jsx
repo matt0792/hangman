@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Alphabet from "./components/Alphabet";
-import GuessedLetters from "./components/GuessedLetters";
 import GameDisplays from "./components/GameDisplays";
 import Options from "./components/Options";
 import Modal from "./components/Modal";
@@ -48,24 +47,24 @@ function App() {
 
     // Check if letter is correct
     if (wordToGuess.includes(letter)) {
+      const newCorrectLetters = [...correctLetters, letter];
       setCorrectLetters((prev) => [...prev, letter]);
+
+      const uniqueCorrectCount = new Set(newCorrectLetters).size;
+      const uniqueWordLetters = new Set(wordToGuess.split("")).size;
+      if (uniqueCorrectCount >= uniqueWordLetters) {
+        setGameWon(true);
+        setGameOver(true);
+      }
     } else {
       setIncorrectLetters((prev) => [...prev, letter]);
-    }
-
-    if (
-      new Set(correctLetters).size + 1 >=
-      new Set(wordToGuess.split("")).size
-    ) {
-      setGameWon(true);
-      setGameOver(true);
     }
   };
 
   // Add keyboard support for guessing letters
   useEffect(() => {
     const handleKeyDown = (event) => {
-      const key = event.key.toUpperCase(); 
+      const key = event.key.toUpperCase();
       if (alphabet.includes(key)) {
         handleGuess(key);
       }
@@ -73,7 +72,7 @@ function App() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener("keydown", handleKeyDown); 
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [alphabet, guessedLetters, gameOver]);
 
